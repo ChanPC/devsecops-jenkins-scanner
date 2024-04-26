@@ -60,7 +60,8 @@ class CodeBuildStack(Stack):
         )
 
         # CodeBuild project that builds the webgoat jar
-        source_owner=self.node.try_get_context("webgoat_owner") or "WebGoat"
+        #source_owner=self.node.try_get_context("webgoat_owner") or "WebGoat"
+        source_owner=self.node.try_get_context("tungwonamz")
         codebuild_jar = codebuild.Project(
             self,
             "BuildImage",
